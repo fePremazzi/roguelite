@@ -1,10 +1,131 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2v6frwba2fis"]
+[gd_scene load_steps=25 format=3 uid="uid://c2v6frwba2fis"]
+
+[ext_resource type="Texture2D" uid="uid://dnhm6m4fwxjeh" path="res://assets/sprites merged.png" id="1_3vyb7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u8vuu"]
+radius = 6.08276
+
+[sub_resource type="Animation" id="Animation_g2els"]
+resource_name = "idle_down"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.143, 0.286, 0.429, 0.572, 0.715, 0.858, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 18), Vector2i(1, 18), Vector2i(2, 18), Vector2i(3, 18), Vector2i(4, 18), Vector2i(5, 18), Vector2i(6, 18), Vector2i(7, 18)]
+}
+
+[sub_resource type="Animation" id="Animation_qhqgy"]
+
+[sub_resource type="Animation" id="Animation_dqkch"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.143, 0.286, 0.429, 0.572, 0.715, 0.868, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 19), Vector2i(1, 19), Vector2i(2, 19), Vector2i(3, 19), Vector2i(4, 19), Vector2i(5, 19), Vector2i(6, 19), Vector2i(7, 19)]
+}
+
+[sub_resource type="Animation" id="Animation_qlg0r"]
+
+[sub_resource type="Animation" id="Animation_tuyoq"]
+
+[sub_resource type="Animation" id="Animation_fjrip"]
+
+[sub_resource type="Animation" id="Animation_smehm"]
+
+[sub_resource type="Animation" id="Animation_ur7pv"]
+
+[sub_resource type="Animation" id="Animation_y4r1p"]
+
+[sub_resource type="Animation" id="Animation_d2wvv"]
+
+[sub_resource type="Animation" id="Animation_3v2ag"]
+
+[sub_resource type="Animation" id="Animation_jej6c"]
+
+[sub_resource type="Animation" id="Animation_f1ej7"]
+
+[sub_resource type="Animation" id="Animation_oprun"]
+
+[sub_resource type="Animation" id="Animation_a8ls1"]
+
+[sub_resource type="Animation" id="Animation_qfm1y"]
+
+[sub_resource type="Animation" id="Animation_fulsm"]
+
+[sub_resource type="Animation" id="Animation_4r5pv"]
+
+[sub_resource type="Animation" id="Animation_60mlk"]
+
+[sub_resource type="Animation" id="Animation_i4ail"]
+
+[sub_resource type="Animation" id="Animation_a38lo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 18)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ni07"]
+_data = {
+&"RESET": SubResource("Animation_a38lo"),
+&"attack_down": SubResource("Animation_f1ej7"),
+&"attack_left": SubResource("Animation_qfm1y"),
+&"attack_right": SubResource("Animation_a8ls1"),
+&"attack_up": SubResource("Animation_oprun"),
+&"dash_down": SubResource("Animation_tuyoq"),
+&"dash_left": SubResource("Animation_ur7pv"),
+&"dash_right": SubResource("Animation_smehm"),
+&"dash_up": SubResource("Animation_fjrip"),
+&"death_down": SubResource("Animation_fulsm"),
+&"death_left": SubResource("Animation_i4ail"),
+&"death_right": SubResource("Animation_60mlk"),
+&"death_up": SubResource("Animation_4r5pv"),
+&"idle_down": SubResource("Animation_g2els"),
+&"idle_left": SubResource("Animation_dqkch"),
+&"idle_right": SubResource("Animation_qlg0r"),
+&"idle_up": SubResource("Animation_qhqgy"),
+&"walk_down": SubResource("Animation_y4r1p"),
+&"walk_left": SubResource("Animation_jej6c"),
+&"walk_right": SubResource("Animation_3v2ag"),
+&"walk_up": SubResource("Animation_d2wvv")
+}
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_u8vuu")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4ni07")
+}
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -11)
+texture = ExtResource("1_3vyb7")
+hframes = 8
+vframes = 30
+frame = 144
