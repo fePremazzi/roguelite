@@ -14,6 +14,15 @@ config/name="roguelite"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/animation-key-helper/plugin.cfg")
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
