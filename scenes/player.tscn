@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://c2v6frwba2fis"]
+[gd_scene load_steps=26 format=3 uid="uid://c2v6frwba2fis"]
 
 [ext_resource type="Texture2D" uid="uid://dnhm6m4fwxjeh" path="res://assets/sprites merged.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://cp64vneod7npp" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u8vuu"]
 radius = 6.08276
@@ -335,6 +336,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
