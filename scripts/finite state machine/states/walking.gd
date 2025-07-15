@@ -1,6 +1,8 @@
-class_name Walk extends PlayerState
+extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
+	print("Entering walk state")
+
 	cardinal_direction = Input.get_vector("left", "right", "up", "down")
 	player.animation_player.play("walk_" + get_anim_direction())
 

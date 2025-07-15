@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://c2v6frwba2fis"]
+[gd_scene load_steps=30 format=3 uid="uid://c2v6frwba2fis"]
 
 [ext_resource type="Script" uid="uid://cp64vneod7npp" path="res://scenes/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://dnhm6m4fwxjeh" path="res://assets/sprites merged.png" id="2_gmlin"]
 [ext_resource type="Script" uid="uid://ble0hi75ic0pl" path="res://scripts/finite state machine/state_machine.gd" id="3_p47bc"]
 [ext_resource type="Script" uid="uid://brtetvrwsxte3" path="res://scripts/finite state machine/states/idle.gd" id="4_75vfm"]
 [ext_resource type="Script" uid="uid://c3sws62ijtyfg" path="res://scripts/finite state machine/states/walking.gd" id="5_0owmy"]
+[ext_resource type="Script" uid="uid://bcq7sfskatf5e" path="res://scripts/finite state machine/states/attacking.gd" id="6_75vfm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u8vuu"]
 radius = 6.08276
@@ -366,3 +367,6 @@ script = ExtResource("4_75vfm")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("5_0owmy")
+
+[node name="Attack" type="Node" parent="StateMachine"]
+script = ExtResource("6_75vfm")
