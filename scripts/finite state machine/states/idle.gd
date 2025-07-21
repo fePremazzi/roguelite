@@ -5,6 +5,7 @@ func enter(previous_state_path: String, data := {}) -> void:
 	player.velocity.x = 0.0
 	player.velocity.y = 0.0
 	super.enter(previous_state_path)
+	print("idle direction is " + get_anim_direction())
 	player.animation_player.play("idle_" + get_anim_direction())
 
 func physics_update(_delta: float) -> void:

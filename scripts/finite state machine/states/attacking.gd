@@ -9,8 +9,10 @@ func enter(previous_state_path: String, data := {}) -> void:
 	player.velocity.x = 0.0
 	player.velocity.y = 0.0
 	super.enter(previous_state_path)
-	player.animation_player.play("attack_" + get_anim_direction())
-	isAttacking = false
+	player.animation_player.play("attack_" + get_anim_direction())	
+	player.animation_player.animation_finished.connect(end_attack)
+	isAttacking = true
+	
 	
 ## Called by the state machine on the engine's physics update tick _physics_process.
 func physics_update(_delta: float) -> void:
@@ -20,3 +22,9 @@ func physics_update(_delta: float) -> void:
 			finished.emit(IDLE)
 		elif Input.is_action_just_pressed("up") or Input.is_action_just_pressed("down") or Input.is_action_pressed("left") or Input.is_action_pressed("right"):
 			finished.emit(WALKING)
+			
+func exit() -> void:
+	player.animation_player.animation_finished.disconnect(end_attack)
+	
+func end_attack(_newAnimName: String) -> void:
+	isAttacking = false
