@@ -2,11 +2,10 @@ extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
 	print("Entering idle state")
+	
 	player.velocity.x = 0.0
 	player.velocity.y = 0.0
-	super.enter(previous_state_path)
-	print("idle direction is " + get_anim_direction())
-	player.animation_player.play("idle_" + get_anim_direction())
+	player.animation_player.play("idle_" + player.get_anim_direction())
 
 func physics_update(_delta: float) -> void:
 	player.move_and_slide()

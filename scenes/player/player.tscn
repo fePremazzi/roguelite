@@ -26,6 +26,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_f1ej7"]
+length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -33,13 +34,14 @@ tracks/0/path = NodePath("Sprite2D:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.142857, 0.285714, 0.428571, 0.571429, 0.714286, 0.857143, 1),
+"times": PackedFloat32Array(0, 0.114286, 0.228571, 0.342857, 0.457143, 0.571429, 0.685714, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(0, 43), Vector2i(1, 43), Vector2i(2, 43), Vector2i(3, 43), Vector2i(4, 43), Vector2i(5, 43), Vector2i(6, 43), Vector2i(7, 43)]
 }
 
 [sub_resource type="Animation" id="Animation_qfm1y"]
+length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -47,13 +49,14 @@ tracks/0/path = NodePath("Sprite2D:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.142857, 0.285714, 0.428571, 0.571429, 0.714286, 0.857143, 1),
+"times": PackedFloat32Array(0, 0.114286, 0.228571, 0.342857, 0.457143, 0.571429, 0.685714, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(0, 50), Vector2i(1, 50), Vector2i(2, 50), Vector2i(3, 50), Vector2i(4, 50), Vector2i(5, 50), Vector2i(6, 50), Vector2i(7, 50)]
 }
 
 [sub_resource type="Animation" id="Animation_a8ls1"]
+length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -61,13 +64,14 @@ tracks/0/path = NodePath("Sprite2D:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.142857, 0.285714, 0.428571, 0.571429, 0.714286, 0.857143, 1),
+"times": PackedFloat32Array(0, 0.114286, 0.228571, 0.342857, 0.457143, 0.571429, 0.685714, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(0, 49), Vector2i(1, 49), Vector2i(2, 49), Vector2i(3, 49), Vector2i(4, 49), Vector2i(5, 49), Vector2i(6, 49), Vector2i(7, 49)]
 }
 
 [sub_resource type="Animation" id="Animation_oprun"]
+length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -75,7 +79,7 @@ tracks/0/path = NodePath("Sprite2D:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.142857, 0.285714, 0.428571, 0.571429, 0.714286, 0.857143, 1),
+"times": PackedFloat32Array(0, 0.114286, 0.228571, 0.342857, 0.457143, 0.571429, 0.685714, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Vector2i(0, 46), Vector2i(1, 46), Vector2i(2, 46), Vector2i(3, 46), Vector2i(4, 46), Vector2i(5, 46), Vector2i(6, 46), Vector2i(7, 46)]

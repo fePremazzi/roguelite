@@ -6,10 +6,10 @@ var isAttacking : bool = true
 ## is a dictionary with arbitrary data the state can use to initialize itself.
 func enter(previous_state_path: String, data := {}) -> void:
 	print("Entering attack state")
+	
 	player.velocity.x = 0.0
 	player.velocity.y = 0.0
-	super.enter(previous_state_path)
-	player.animation_player.play("attack_" + get_anim_direction())	
+	player.animation_player.play("attack_" + player.get_anim_direction())	
 	player.animation_player.animation_finished.connect(end_attack)
 	isAttacking = true
 	
