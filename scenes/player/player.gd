@@ -1,6 +1,7 @@
 class_name Player extends CharacterBody2D
 
 @export var SPEED = 100.0
+@export var DASH_SPEED = 300.0
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 var cardinal_direction : Vector2 = Vector2.DOWN
