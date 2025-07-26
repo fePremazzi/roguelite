@@ -2,7 +2,7 @@ extends PlayerState
 
 var isDashing : bool = true
 var dash_duration := 0.8
-var distance_to_cover = 50 #pixels
+var distance = 50
 
 ## Called by the state machine upon changing the active state. The `data` parameter
 ## is a dictionary with arbitrary data the state can use to initialize itself.
@@ -15,8 +15,8 @@ func enter(previous_state_path: String, data := {}) -> void:
 ## Called by the state machine on the engine's physics update tick _physics_process.
 func physics_update(_delta: float) -> void:
 	var input_direction := Input.get_vector("left", "right","up", "down")
-	player.velocity.x = (distance_to_cover / dash_duration) * player.cardinal_direction.x
-	player.velocity.y = (distance_to_cover / dash_duration) * player.cardinal_direction.y
+	player.velocity.x = (distance / dash_duration) * player.cardinal_direction.x
+	player.velocity.y = (distance / dash_duration) * player.cardinal_direction.y
 	player.move_and_slide()
 	
 	if not isDashing:
